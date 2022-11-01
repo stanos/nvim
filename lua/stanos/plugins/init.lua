@@ -50,5 +50,4 @@ return require('packer').startup(function(use)
 	use 'arcticicestudio/nord-vim'
 	use 'nvim-telescope/telescope-symbols.nvim'
 	use 'xiyaowong/telescope-emoji.nvim'
-	use '~/hello'
 end)
