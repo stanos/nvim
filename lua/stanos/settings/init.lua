@@ -1,5 +1,6 @@
 local opt = vim.opt
---vim.cmd [[colorscheme nord]]
+
+vim.cmd [[colorscheme gruvbox]]
 -- numbers
 opt.relativenumber = true
 opt.number = true

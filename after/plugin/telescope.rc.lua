@@ -20,7 +20,8 @@ telescope.setup {
 	},
 	extensions = {
 		file_browser = {
-			theme = "ivy",
+			initial_mode = "normal",
+			theme = "dropdown",
 			-- disables netrw and use telescope-file-browser in its place
 			hijack_netrw = true,
 			mappings = {
