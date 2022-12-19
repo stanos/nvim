@@ -2,7 +2,11 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
+	use "rebelot/kanagawa.nvim"
 	use 'wbthomason/packer.nvim'
+	use 'projekt0n/github-nvim-theme'
+	use 'folke/tokyonight.nvim'
+	use 'tjdevries/train.nvim'
 	use 'Shatur/neovim-ayu'
 	use 'neovim/nvim-lspconfig'
 	-- using packer.nvim
@@ -51,4 +55,8 @@ return require('packer').startup(function(use)
 	use 'nvim-telescope/telescope-symbols.nvim'
 	use 'xiyaowong/telescope-emoji.nvim'
 	use 'morhetz/gruvbox'
+	use {
+		'svrana/neosolarized.nvim',
+		requires = { 'tjdevries/colorbuddy.nvim' }
+	}
 end)

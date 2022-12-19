@@ -19,8 +19,7 @@ end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
-	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+local on_attach = function(client, bufnr) local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
 	--Enable completion triggered by <c-x><c-o>
 	--local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -33,6 +32,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 	--buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 	buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+
 	--buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
@@ -84,6 +84,11 @@ nvim_lsp.sourcekit.setup {
 	capabilities = capabilities,
 }
 
+nvim_lsp.rust_analyzer.setup {
+	capabilities = capabilities,
+	on_attach = on_attach
+}
+
 nvim_lsp.sumneko_lua.setup {
 	capabilities = capabilities,
 	on_attach = function(client, bufnr)
@@ -131,10 +136,6 @@ nvim_lsp.astro.setup {
 	capabilities = capabilities
 }
 
-nvim_lsp.arduino_language_server.setup {
-	on_attach = on_attach,
-	capabilities, capabilities
-}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 	vim.lsp.diagnostic.on_publish_diagnostics, {

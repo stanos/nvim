@@ -5,6 +5,8 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
+keymap.set('n', ',<space>', ':tabNext<cr>')
+keymap.set('n', '.<space>', ':tabnext<cr>')
 keymap.set('i', 'jk', '<ESC>')
 -- New tab
 keymap.set('n', 'te', ':tabedit')

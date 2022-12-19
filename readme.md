@@ -19,3 +19,5 @@
 * space = cycle thru splits;
 * to close split = :q
 * ESC (in terminal) = exit terminal insert; 
+
+####
