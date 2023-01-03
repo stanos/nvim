@@ -27,3 +27,4 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 keymap.set('t', '<ESC>', '<C-\\><C-n>')
+keymap.set('n', '<leader>py', ':Prettier<CR>')

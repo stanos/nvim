@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 -- Theme / Colorscheme
-vim.cmd [[colorscheme kanagawa]]
+vim.cmd [[colorscheme tokyonight-night]]
 
 -- numbers
 opt.relativenumber = true

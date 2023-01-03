@@ -2,8 +2,11 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
+	use 'rust-lang/rust.vim'
+	use 'prettier/vim-prettier'
 	use "rebelot/kanagawa.nvim"
 	use 'wbthomason/packer.nvim'
+	use { 'stevearc/vim-arduino' }
 	use 'projekt0n/github-nvim-theme'
 	use 'folke/tokyonight.nvim'
 	use 'tjdevries/train.nvim'
