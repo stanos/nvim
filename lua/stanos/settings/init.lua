@@ -2,6 +2,7 @@ local opt = vim.opt
 
 -- Theme / Colorscheme
 vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[set timeoutlen=250]]
 
 -- numbers
 opt.relativenumber = true
