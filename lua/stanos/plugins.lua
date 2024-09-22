@@ -39,7 +39,7 @@ require("lazy").setup({
 			priority = 1000, -- make sure to load this before all the other start plugins
 			config = function()
 				-- load the colorscheme here
-				vim.cmd([[colorscheme catppuccin]])
+				vim.cmd([[colorscheme tokyonight-night]])
 			end,
 		},
 		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -74,6 +74,13 @@ require("lazy").setup({
 		{
 			"nvim-telescope/telescope-file-browser.nvim",
 			dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+		},
+		{
+			"startup-nvim/startup.nvim",
+			dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim" },
+			config = function()
+				require "startup".setup()
+			end
 		}
 
 	},
