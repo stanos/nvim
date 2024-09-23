@@ -1,8 +1,8 @@
 # NVIM Config by Stanos
 
 ## Keymap:
-### <Leader> = Space
+### Leader = Space
 
-* Telescope = <Leader>ts
-* File Browser = <Leader>fb
+* Telescope = Leader ts
+* File Browser = Leader fb
 
