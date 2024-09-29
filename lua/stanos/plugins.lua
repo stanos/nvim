@@ -24,7 +24,8 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ "folke/which-key.nvim", lazy = true },
+		{ "xiyaowong/telescope-emoji.nvim" },
+		{ "nvim-telescope/telescope-symbols.nvim" },
 		{
 			"max397574/better-escape.nvim",
 			config = function()
@@ -74,7 +75,47 @@ require("lazy").setup({
 		{
 			"nvim-telescope/telescope-file-browser.nvim",
 			dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-		}
+		},
+		{
+			"folke/which-key.nvim",
+			event = "VeryLazy",
+			opts = {
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			},
+			keys = {
+				{
+					"<leader>?",
+					function()
+						require("which-key").show({ global = false })
+					end,
+					desc = "Buffer Local Keymaps (which-key)",
+				},
+			},
+		},
+		{
+			"ray-x/lsp_signature.nvim",
+			event = "VeryLazy",
+			opts = {},
+			config = function(_, opts) require'lsp_signature'.setup(opts) end
+		},
+		{
+			"williamboman/mason.nvim"
+		},
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ "hrsh7th/nvim-cmp" },
+		{ "neovim/nvim-lspconfig" },
+		{ "petertriho/cmp-git" },
+		{ "nvim-lua/plenary.nvim" },
+		{ "onsails/lspkind-nvim" },
+		{ "williamboman/mason-lspconfig.nvim" },
+		{
+			'nvim-lualine/lualine.nvim',
+			dependencies = { 'nvim-tree/nvim-web-devicons' }
+		},
+		{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
+
 
 	},
 	-- Configure any other settings here. See the documentation for more details.

@@ -1,4 +1,4 @@
-local opt = vim.opt 
+local opt = vim.opt
 
 opt.number = true
 opt.relativenumber = true
@@ -20,7 +20,7 @@ opt.completeopt = { 'menuone', 'noselect', 'noinsert' }
 opt.shiftwidth = 2
 opt.undofile = true
 opt.tabstop = 2
---opt.list = true
-opt.lcs = 'eol:⏎,'
+-- opt.list = true
+-- opt.lcs = 'eol:⏎,'
 
 vim.o.timeoutlen = 300
