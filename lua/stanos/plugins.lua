@@ -23,6 +23,7 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
+	checker = { enabled = false },
 	spec = {
 		{ "xiyaowong/telescope-emoji.nvim" },
 		{ "nvim-telescope/telescope-symbols.nvim" },
