@@ -102,3 +102,24 @@ nvim_lsp.ts_ls.setup {
 	capabilities = capabilities
 }
 
+nvim_lsp.phpactor.setup {
+	on_attach = on_attach,
+	filetypes = { "php" },
+	capabilities = capabilities
+}
+
+nvim_lsp.html.setup {
+	on_attach = on_attach,
+	filetypes = { "php" },
+	capabilities = capabilities
+}
+
+nvim_lsp.biome.setup {
+	on_attach = on_attach,
+	capabilities = capabilities
+}
+
+nvim_lsp.prettier.setup {
+	on_attach = on_attach,
+	capabilities = capabilities
+}

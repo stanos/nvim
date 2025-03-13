@@ -115,9 +115,8 @@ require("lazy").setup({
 			'nvim-lualine/lualine.nvim',
 			dependencies = { 'nvim-tree/nvim-web-devicons' }
 		},
-		{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
-
-
+		{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+		{'prettier/vim-prettier'}
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
